@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+}
+body{
+    background-color: #081b29;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+.div-1{
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background: transparent;
+    border: 3px solid green;
+    box-shadow: 0 0 25px green;
+    overflow: hidden;
+    
+}
+.div-1 .div-2{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.div-1 .div-2.Login{
+    left: 0;
+    padding: 0 60px 0 40px;
+}
+.div-1 .div-2.Login .anime {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: .7s ease;
+    transition-delay:calc(.1s*var(--j)) ;
+}
+.div-1.active .div-2.Login .anime {
+    transform: translateX(-120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition-delay:calc(.1s*var(--i)) ;
+    pointer-events: none;
+}
+.div-1 .div-2.register{
+    right: 0;
+    padding: 0 40px 0 60px;  
+    pointer-events: none;  
+}
+.div-1.active .div-2.register{
+    pointer-events: auto;
+}
+.div-1 .div-2.register .anime{
+    transform: translateX(120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition: .7s ease;
+    transition-delay:calc(.1s*var(--j)) ;
+
+}
+.div-1.active .div-2.register .anime{
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay:calc(.1s*var(--i)) ;
+}
+.div-2 h2{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 15%;
+   top: -5%;
+    position: relative;
+
+}
+.div-2 .div-3{
+    position: relative;
+    width:100%;
+    height:25px;
+    margin:50px 0;
+}
+.div-3 input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    padding-right: 23px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    transition: .5s;
+}
+.div-3 input:focus,
+.div-3 input:valid{
+    border-bottom-color:green ;
+}
+.div-3 label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.div-3 input:focus~label,
+.div-3 input:valid~label{
+     top:-5px;
+     color:green;
+}
+.div-3 i{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #fff;
+    transition: .5s;
+}
+.div-3 input:focus~i,
+.div-3 input:valid~i{
+    color:green;
+}
+.but{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border:2px solid green;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 0;
+    
+}
+.but::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: linear-gradient(#081b29,green,#081b29,green);
+    z-index: -1;
+    transition: .5s;
+}
+.but:hover::before {
+    top:0%;
+}
+
+.div-2 .div-4{
+    font-size: 14.5px;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+.div-4 p a {
+    color:green;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+.div-4 p a:hover{
+    text-decoration: underline;
+}
+.div-1 .div-5 {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.div-1  .div-5.Login{
+    right: 0;
+    text-align: right;
+    padding: 0 40px 60px 150px;
+   
+}
+.div-1 .div-5.Login .anime {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: .7s ease;
+    transition-delay:calc(.1s*var(--j)) ;
+}
+.div-1.active .div-5.Login .anime {
+    transform: translateX(120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition-delay:calc(.1s*var(--i)) ;
+}
+.div-1  .div-5.register{
+    left: 0;
+    text-align: left;
+    padding: 0 150px 60px 40px;
+    top: -20%;
+    pointer-events: none;
+    
+}
+.div-1.active .div-5.register{
+    pointer-events: auto;
+}
+.div-1 .div-5.register .anime{
+    transform: translateX(-120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition: .7s ease;
+    transition-delay:calc(.1s*var(--j)) ;
+}
+.div-1.active .div-5.register .anime{
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay:calc(.1s*var(--i)) ;
+}
+
+.div-5 h2{
+    font-size: 36px;
+    color: #fff;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+.div-5 p{
+    font-size: 16px;
+    color: #fff;
+
+}
+.div-1 .bady{
+    position: absolute;
+    top:-10px;
+    right: 0;
+    width: 900px;
+    height: 700px;
+    background: linear-gradient(45deg,#081b29,green);
+    border-bottom: 3px solid green;
+    transform: rotate(10deg) skewY(40deg);
+    transform-origin: bottom right;
+    transition: 1.2s ease;
+    transition-delay: 1.6s;
+}
+.div-1.active .bady{
+     transform: rotate(0) skewY(0);
+     transition-delay:.1s;
+}
+.div-1 .bady2{
+    position: absolute;
+    top:100%;
+    left: 300px;
+    width: 900px;
+    height: 820px;
+    background: #081b29;
+    border-top: 3px solid green;
+    transform: rotate(0) skewY(0);
+    transform-origin: bottom left;
+    transition:1.5s ease;
+    transition-delay: .5s;
+}
+.a-link{
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.div-1.active .bady2{
+    transform: rotate(-11deg) skewY(-41deg);
+    transition-delay: 0.6s;
+   
+}
